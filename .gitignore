@@ -15,8 +15,10 @@
 
 # Build results
 [Dd]ebug/
+[Dd]ebug FB2K/
 [Dd]ebugPublic/
 [Rr]elease/
+[Rr]elease FB2K/
 [Rr]eleases/
 x64/
 x86/
