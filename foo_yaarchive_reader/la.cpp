@@ -19,6 +19,10 @@ namespace larchive {
 		this->p_abort = &m_abort;
 		int ret = la::archive_read_next_header(arch, &entry);
 		if (ret == ARCHIVE_OK) {
+			//for foo_upacker compatibility
+			auto pathname = pfc::string8(this->pathname());
+			if (pathname.replace_byte('/', '\\') > 0)
+				archive_entry_set_pathname_utf8(entry, pathname.get_ptr());
 			return true;
 		}
 		else if (ret == ARCHIVE_EOF) {
