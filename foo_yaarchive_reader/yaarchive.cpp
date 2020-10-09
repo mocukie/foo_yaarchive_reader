@@ -129,5 +129,10 @@ namespace {
 	static service_factory_single_t<input_file_type_v2_impl> g_tar("tar;tar.gz;tgz;tar.xz;txz", "Tape Archive", "Tape Archive");
 }
 
-DECLARE_COMPONENT_VERSION("Yet Another Archive Reader", "0.0.1", "zip, rar, 7z, tar (ﾟ∀。)");
+DECLARE_COMPONENT_VERSION("Yet Another Archive Reader", "0.0.1", 
+R"(Read audio in zip, rar, 7z, tar directly without upack to memory or temp folder.
+
+Copyright (C) 2020 Marklin Lin <mocukie0@gmail.com>
+)"
+);
 VALIDATE_COMPONENT_FILENAME("foo_yaarchive_reader.dll");
